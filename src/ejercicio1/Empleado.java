@@ -12,6 +12,8 @@ public class Empleado {
         ContId++;
         
 		this.id = ContId;	
+		this.nombre = "Sin nombre";
+		this.edad = 99;
 	}
 	
 	public Empleado(String nombre, int edad) {
@@ -38,8 +40,14 @@ public class Empleado {
 	public void setEdad(int edad) {
 		this.edad = edad;
 	}
+	
+	//Methods
 	@Override
 	public String toString() {
 		return "Empleado [id=" + id + ", nombre=" + nombre + ", edad=" + edad + "]";
+	}
+	
+	static int devuelveProximoID() {
+		return ContId + 1;
 	}
 }
