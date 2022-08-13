@@ -1,15 +1,23 @@
 package ejercicio1;
 
 public class Empleado {
-	//Atributos 
-	private int id;
+	//Attributes 
+	private final int id;
 	private String nombre;
 	private int edad;
+	private static int ContId = 1000;
 	
-	public Empleado() {}
+	//Constructors
+	public Empleado() {
+        ContId++;
+        
+		this.id = ContId;	
+	}
 	
-	public Empleado(int id, String nombre, int edad) {
-		this.id = id;
+	public Empleado(String nombre, int edad) {
+		ContId++;
+		
+		this.id = ContId;
 		this.nombre = nombre;
 		this.edad = edad;
 	}
@@ -17,9 +25,6 @@ public class Empleado {
 	//Setters y Getters
 	public int getId() {
 		return id;
-	}
-	public void setId(int id) {
-		this.id = id;
 	}
 	public String getNombre() {
 		return nombre;
@@ -37,7 +42,4 @@ public class Empleado {
 	public String toString() {
 		return "Empleado [id=" + id + ", nombre=" + nombre + ", edad=" + edad + "]";
 	}
-	
-	
-
 }
