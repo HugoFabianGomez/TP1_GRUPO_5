@@ -5,7 +5,7 @@ public class Empleado {
 	private final int id;
 	private String nombre;
 	private int edad;
-	private static int ContId = 1000;
+	private static int ContId = 999;
 	
 	//Constructors
 	public Empleado() {
