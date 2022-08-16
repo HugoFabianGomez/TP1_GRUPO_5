@@ -47,7 +47,7 @@ public class Empleado {
 		return "ID de Empleado: " + id + "\nNombre: " + nombre + "\nEdad: " + edad;
 	}
 	
-	static int devuelveProximoID() {
+	public static int devuelveProximoID() {
 		return ContId + 1;
 	}
 }
